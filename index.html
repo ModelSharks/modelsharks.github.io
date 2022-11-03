@@ -13,7 +13,7 @@
     <nav class="sticky">
         <div class="topnav" id="topnav">
             <a href="index.html" class="active">Home</a>
-            <a href="#">Other</a>
+<!--            <a href="#">Other</a>-->
         </div>
     </nav>
     <div class="header">
@@ -22,13 +22,142 @@
     </div>
     <nav>
         <div class="main_content">
-            <h1>Content will be added soon</h1>
+            <div class="main_content_text">
+                <h1>Our model's purpose</h1>
+                <p>
+                    The purpose of our model is to estimate the number of homes within the Scottsdale city limits.
+                </p>
+            </div>
+        </div>
+        <div class="main_content">
+            <div class="main_content_text">
+            </div>
+        </div>
+    </nav>
+    <nav>
+        <div class="header_sub">
+            <h1>
+                Background Information
+            </h1>
         </div>
     </nav>
     <nav>
         <div class="main_content">
-            
+            <div class="main_content_text">
+                <p>
+                    <a href="https://www.scottsdaleaz.gov/about">Incorporated in 1951</a>,
+                    Scottsdale is located in the Phoenix metro area, in Arizona.  Like most areas in Arizona,
+                    Scottsdale is a desert, with an
+                    <a href="https://en-us.topographic-map.com/map-c7m2/Scottsdale/">average elevation of 1,818 feet</a>.
+                </p>
+                <p>
+                    The average home size in Scottsdale is
+                    <a href="https://www.12news.com/article/news/local/arizona/phoenix-leads-nation-in-shrinking-million-dollar-homes/75-4c152bd3-79d2-413a-856d-5504e6971bd4">
+                        1,700 square-feet
+                    </a>
+                    with an average lot size of
+                    <a href="https://www.scottsdalerealtors.org/2022/09/12/some-of-the-smallest-average-home-lot-sizes-are-in-arizona/">
+                        8,726 square feet
+                    </a>
+                    in its state and an
+                    <a href="https://www.towncharts.com/Arizona/Housing/Scottsdale-city-AZ-Housing-data.html#Figure2">
+                        average housing density of 756.7
+                    </a>
+                    houses per square mile, with
+                    <a href="https://www.scottsdaleaz.gov/Assets/ScottsdaleAZ/General+Plan/Land+Use+Element.pdf">
+                        51% of homes
+                    </a>
+                    being residential homes.
+                </p>
+                <p>
+                    The total area of Scottsdale is
+                    <a href="https://www.scottsdaleaz.gov/about">
+                        184.5 square miles
+                    </a>, stretching 31 miles from north to south.
+                </p>
+            </div>
         </div>
     </nav>
+    <nav>
+        <div class="header_sub">
+            <h1>
+                Terminology
+            </h1>
+        </div>
+    </nav>
+    <nav>
+        <div class="main_content">
+            <div class="main_content_text">
+                <p>
+                    To ensure our model is as accurate as possible, we made definite terms to reduce ambiguity:
+                </p>
+                <ul>
+                    <li>
+                        Homes are single-family homes, apartments, and townhomes.
+                    </li>
+                    <li>
+                        Scottsdale, or the Scottsdale area, is the Scottsdale city limits.
+                    </li>
+                    <li>
+                        Homes are completed homes, not ones which are under construction.
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <nav>
+        <div class="header_sub">
+            <h1>
+                Model
+            </h1>
+        </div>
+    </nav>
+    <nav>
+        <div class="main_content">
+            <div class="main_content_text">
+                <p>
+                    We used many variables in our first attempt at an algorithm:
+                </p>
+                <ul class="inner-list">
+                    <li>
+                        L - Square miles of land (184.5 mi<sup>2</sup>)
+                    </li>
+                    <li>
+                        R - Percentage of residential homes (51%)
+                    </li>
+                    <li>
+                        F - Percent of single-family homes (60.45%)
+                    </li>
+                    <li>
+                        S - Average lot size (8,726 feet<sup>2</sup>)
+                    </li>
+                    <li>
+                        H - Number of homes (what we are calculating)
+                    </li>
+                    <li>
+                        D - Housing density (756.7 mi<sup>2</sup>)
+                    </li>
+                </ul>
+                <p>
+                    In our initial attempt, we tried using the following formula:
+                </p>
+                <code>
+                    H = (L * R * F) / S
+                </code>
+                <p>
+                    This gave us a number well-below one (around 0.006), so we attempted a new formula instead:
+                </p>
+                <code>
+                    H = L * R * D
+                </code>
+                <p>
+                    Which gave us a much more promising number of 71,202 homes.
+                </p>
+            </div>
+        </div>
+    </nav>
+    <div class="padding_area">
+        
+    </div>
 </body>
 </html>
